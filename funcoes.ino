@@ -1,17 +1,18 @@
 void setup() {
   Serial.begin(9600);// start the serial comm
   Serial.flush();// cleans everything
-  int a=3; 
+  int a=12; 
   int b=3;
+  unsigned tstart = micros();
  //addmult(a,b); // calls the functions that adds numbers and calculate multiplication always with a,b
   fact(a);// calls the function that calculates the factorial of a
-  unsigned tstart = micros();
+
   unsigned long tend=micros();
   unsigned long duration= tend -tstart;
   Serial.print("\n");
   Serial.print("Demorou:");
   Serial.print(duration);
-  Serial.print("micros");
+  Serial.print(" ms");
 }
 
 void loop() {
