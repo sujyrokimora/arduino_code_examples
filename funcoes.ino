@@ -1,4 +1,5 @@
 void setup() {
+  
   Serial.begin(9600);// start the serial comm
   Serial.flush();// cleans everything
   int a=12; 
@@ -6,7 +7,6 @@ void setup() {
   unsigned tstart = micros();
  //addmult(a,b); // calls the functions that adds numbers and calculate multiplication always with a,b
   fact(a);// calls the function that calculates the factorial of a
-
   unsigned long tend=micros();
   unsigned long duration= tend -tstart;
   Serial.print("\n");
@@ -21,7 +21,7 @@ void loop() {
 }
 void fact(int a)//function that calculates the factorial of a
 {
-  int f=1;
+  unsigned long f=1;
   for (int p = 2; p <= a; p++)//loop that adds up until calculates the factorial of a
     f = f * p;
  
