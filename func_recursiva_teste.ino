@@ -1,4 +1,4 @@
-
+//foi so para testar uma cena o stor fez outra
 void setup() {
  Serial.begin(9600);
  Serial.flush();
